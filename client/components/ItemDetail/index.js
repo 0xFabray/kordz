@@ -84,7 +84,7 @@ export default function ItemDetail(props) {
             <Box>
               <Text
                 fontSize={{ base: "16px", lg: "18px" }}
-                color={useColorModeValue("#5650C4", "#5650C4")}
+                color={useColorModeValue("#6c41b9", "#6c41b9")}
                 fontWeight={"500"}
                 textTransform={"uppercase"}
                 mb={"4"}
@@ -105,7 +105,7 @@ export default function ItemDetail(props) {
                   </Text>{" "}
                   <Link
                     href={token}
-                    color={useColorModeValue("#5650C4", "#5650C4")}
+                    color={useColorModeValue("#6c41b9", "#6c41b9")}
                   >
                     {token}
                   </Link>
@@ -130,7 +130,7 @@ export default function ItemDetail(props) {
             fontFamily={"heading"}
             mt={8}
             w={"full"}
-            bgGradient="linear(to-r, #00d8c1,#5650C4)"
+            bgGradient="linear(to-r, #9d6feb,#6c41b9)"
             color={"white"}
             size={"lg"}
             textTransform={"uppercase"}

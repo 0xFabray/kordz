@@ -1,21 +1,21 @@
 const navItems = [
   {
-    label: "🏛️Market",
+    label: "📻️Market",
     href: "/items",
   },
   {
-    label: "🚀Create",
+    label: "🎤Create",
     children: [
       {
-        label: "Upload NFT",
-        subLabel: "Contribute to the ever-growing world of NFTs",
+        label: "Create Music",
+        subLabel: "Share your musical creation with the world",
         href: "/upload",
       },
 
       {
         label: "Suggest Feature",
-        subLabel: "Suggest features you'd like to see in metis.market",
-        href: "https://github.com/callistachang/metis.market/issues",
+        subLabel: "Suggest features you'd like to see in Kordz",
+        href: "https://github.com/0xFabray/kordz/issues",
       },
     ],
   },
@@ -23,13 +23,13 @@ const navItems = [
     label: "🎫Events",
     children: [
       {
-        label: "Events",
-        subLabel: "Exciting NFT-related events on metis.market",
+        label: "Artist Events",
+        subLabel: "Artist events on Kordz",
         href: "#",
       },
       {
-        label: "Blind Boxes",
-        subLabel: "Unbox rare digital collectibles",
+        label: "Rising Stars Showcase",
+        subLabel: "A showcase for rising stars on Kordz",
         href: "#",
       },
     ],
@@ -38,13 +38,13 @@ const navItems = [
     label: "📚Resources",
     children: [
       {
-        label: "Rankings",
-        subLabel: "NFT rankings on metis.market",
+        label: "Kordzboard",
+        subLabel: "Top songs owned on Kordz",
         href: "#",
       },
       {
-        label: "Docs",
-        subLabel: "Documentation to metis.market's API",
+        label: "Developer Docs",
+        subLabel: "Documentation to Kordz' API",
         href: "#",
       },
     ],

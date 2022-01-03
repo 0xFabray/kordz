@@ -8,7 +8,7 @@
   <p align="center">
   A decentralized music owning platform built with Polygon. Power to the musicians.
     <br />
-    <a href="https://stardust-explorer.metis.io/address/0x48575A330A942e6ca06aC54E38B038C3eD5Ef703/transactions">View Smart Contract on Stardust Explorer</a>
+    <a href="https://mumbai.polygonscan.com/address/0x583ADc8C133fdaCEd2546c0348a5AB4aA7B5BBd6">View Smart Contract on the Polygon Block Explorer</a>
   </p>
 </div>
 
@@ -40,9 +40,9 @@
 
 ## About The Project
 
-**Kordz** is a simple but beautiful proof-of-concept of a decentralized music owning platform built with Polygon, aiming to reimagine how musicians earn a living and how fans discover new ways to connect with the music and each other. **Kordz** allows artists to sell digital songs to fans, who are then able to hold a digitally signed copy of your song (on the Polygon blockchain) that could be limited edition, or even a 1/1 edition. Kordz encourages fans who want to support their favorite artists to support them by creating unique digital assets.
+**Kordz** is a simple but beautiful proof-of-concept of a decentralized music owning platform built with Polygon, aiming to reimagine how musicians earn a living and how fans discover new ways to connect with the music and each other. **Kordz** allows artists to sell digital songs to fans, who are then able to hold a digitally signed copy of your song (on the Polygon blockchain) that could be limited edition, or even a 1/1 edition. **Kordz** encourages fans who want to support their favorite artists to support them by creating unique digital assets.
 
-In a world where only very few extremely popular artists can earn a sustainable full-time living, Kordz aims to disrupt the music industry by introducing the concept of royalties, making it more possible for more people to earn a living from their music.
+In a world where only very few extremely popular artists can earn a sustainable full-time living, **Kordz** aims to disrupt the music industry by introducing the concept of royalties, making it more possible for more people to earn a living from their music.
 
 It is built with Next.js, which offers blazing-fast server side rendering, and currently uses a Flask backend as temporary metadata storage. The smart contract is deployed on Polygon using the excellent Truffle suite, making deployments simple and easy.
 
@@ -105,11 +105,11 @@ To get a local copy of **Kordz** up and running, please follow these steps.
 
 ## Screenshots
 
-<!-- [![Product Name Screen Shot](images/home-screen.png)](images/create-screen.png)
+[![Product Name Screen Shot](images/home-screen.png)](images/create-screen.png)
 
-[![Product Name Screen Shot](images/create-screen.png)](images/create-screen.png)
+<!-- [![Product Name Screen Shot](images/create-screen.png)](images/create-screen.png) -->
 
-Watch the demo here: https://vimeo.com/661321726 -->
+<!-- Watch the demo here: https://vimeo.com/661321726 -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -1,5 +1,5 @@
-import MetisMarketToken from "../contracts/MetisMarketToken.json";
-import MetisMarketplace from "../contracts/MetisMarket.json";
+import KordzToken from "../contracts/KordzToken.json";
+import KordzMarketplace from "../contracts/KordzMarketplace.json";
 import { ethers } from "ethers";
 import { api } from "./api";
 
@@ -30,8 +30,8 @@ export const getItem = async (id) => {
 export const getTokenContract = async (chainId, library) => {
   const signer = await library.getSigner();
   const contract = new ethers.Contract(
-    MetisMarketToken.networks[Number(chainId)].address,
-    MetisMarketToken.abi,
+    KordzToken.networks[Number(chainId)].address,
+    KordzToken.abi,
     signer
     // library
   );
@@ -41,8 +41,8 @@ export const getTokenContract = async (chainId, library) => {
 export const getMarketplaceContract = async (chainId, library) => {
   const signer = await library.getSigner();
   return new ethers.Contract(
-    MetisMarketplace.networks[Number(chainId)].address,
-    MetisMarketplace.abi,
+    KordzMarketplace.networks[Number(chainId)].address,
+    KordzMarketplace.abi,
     // library
     signer
   );

@@ -55,7 +55,7 @@ export default function SmallCentered() {
           fontSize="xl"
           py={3}
         >
-          🏬 metis.market
+          🎶 Kordz
         </Text>
 
         <Stack direction={"row"} spacing={6}>

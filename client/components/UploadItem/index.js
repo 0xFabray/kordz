@@ -124,7 +124,7 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
               Create A{" "}
               <Text
                 as={"span"}
-                bgGradient="linear(to-r, #00d8c1,#5650C4)"
+                bgGradient="linear(to-r, #9d6feb,#6c41b9)"
                 bgClip="text"
               >
                 Collectible
@@ -132,7 +132,7 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
             </Heading>
             <Text color={"gray.500"} fontSize={{ base: "sm", sm: "md" }}>
               File types supported: JPG, PNG, GIF, SVG, MP4, WEBM. Max size: 40
-              MB. Thank you for creating with metis.market!
+              MB. Thank you for creating with Kordz!
             </Text>
           </Stack>
           <Box as={"form"} mt={10}>
@@ -175,10 +175,10 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
               fontFamily={"heading"}
               mt={8}
               w={"full"}
-              bgGradient="linear(to-r, #00d8c1,#5650C4)"
+              bgGradient="linear(to-r, #9d6feb,#6c41b9)"
               color={"white"}
               _hover={{
-                bgGradient: "linear(to-r, #00d8c1,#5650C4)",
+                bgGradient: "linear(to-r, #9d6feb,#6c41b9)",
                 boxShadow: "xl",
               }}
               onClick={uploadNewNFT}

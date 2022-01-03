@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>metis.market</title>
+        <title>Kordz</title>
         <link rel="shortcut icon" href="favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta

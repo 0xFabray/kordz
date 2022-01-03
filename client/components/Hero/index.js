@@ -32,26 +32,24 @@ export default function JoinOurTeam() {
             lineHeight={1.1}
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "7xl" }}
           >
-            The NFT Marketplace Powered By{" "}
+            Own your{" "}
             <Text
               as={"span"}
-              bgGradient="linear(to-r, #00d8c1,#5650C4)"
+              bgGradient="linear(to-r, #9d6feb,#6c41b9)"
               bgClip="text"
             >
-              $METIS
+              music.
             </Text>
           </Heading>
           <Text
             as={"span"}
             fontSize={{ base: "1xl", sm: "1xl", md: "2xl", lg: "2xl" }}
-            bgGradient="linear(to-r, gray.500, gray.500)"
+            bgGradient="linear(to-r, purple.500, purple.800)"
             bgClip="text"
-            fontStyle="italic"
           >
-            metis.market aims to connect creators and users in a decentralized
-            manner, all experiencing the blazing speed and low gas fees of Metis
-            L2! Discover, collect and trade NFTs on the very first fully-fledged
-            NFT marketplace on Metis.
+            Kordz connects creators and fans in a decentralized way on the cheap
+            and fast Polygon network. Discover and collect digital collectibles
+            on a platform made by musicians, built for musicians.
           </Text>
           <Stack
             flex={{ base: 1, md: 0 }}
@@ -64,8 +62,8 @@ export default function JoinOurTeam() {
               fontSize={"xl"}
               fontWeight={600}
               color={"white"}
-              bgGradient="linear(to-r, #00d8c1,#5650C4)"
-              // bg={"#00d8c1"}
+              bgGradient="linear(to-r, #9d6feb,#6c41b9)"
+              // bg={"#9d6feb"}
               href="/items"
               size="lg"
               _hover={{

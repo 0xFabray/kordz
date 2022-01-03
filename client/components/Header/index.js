@@ -85,7 +85,7 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
             fontSize="xl"
           >
-            <Link href="/">🏬 metis.market (Beta)</Link>
+            <Link href="/">🎶 Kordz</Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -114,8 +114,8 @@ export default function WithSubnavigation() {
               fontSize={"xl"}
               fontWeight={600}
               color={"white"}
-              bg={"#00d8c1"}
-              bgGradient="linear(to-r, #00d8c1,#5650C4)"
+              bg={"#9d6feb"}
+              bgGradient="linear(to-r, #9d6feb,#6c41b9)"
               href={"#"}
               _hover={{
                 bg: "pink.300",
@@ -130,8 +130,8 @@ export default function WithSubnavigation() {
               fontSize={"xl"}
               fontWeight={600}
               color={"white"}
-              // bg={"#00d8c1"}
-              bgGradient="linear(to-r, #00d8c1,#5650C4)"
+              // bg={"#9d6feb"}
+              bgGradient="linear(to-r, #9d6feb,#6c41b9)"
               href={"#"}
               _hover={{
                 bg: "pink.300",

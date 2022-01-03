@@ -30,7 +30,7 @@ export default function Marketplace({ items }) {
         The{" "}
         <Text
           as={"span"}
-          bgGradient="linear(to-r, #00d8c1,#5650C4)"
+          bgGradient="linear(to-r, #9d6feb,#6c41b9)"
           bgClip="text"
         >
           Marketplace
