@@ -85,7 +85,7 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
             fontSize="xl"
           >
-            <Link href="/">🎶 Kordz</Link>
+            <Link href="/">🎶 Kordz (Beta)</Link>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>

@@ -30,6 +30,7 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
   const router = useRouter();
 
   const [uploadedFile, setUploadedFile] = useState();
+  const [uploadedSong, setUploadedSong] = useState();
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -107,7 +108,18 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
         spacing={{ base: 10, lg: 32 }}
         py={{ base: 10, sm: 20, lg: 28 }}
       >
-        <DropZone onFileUploaded={setUploadedFile} />
+        <Stack>
+          <DropZone
+            onFileUploaded={setUploadedFile}
+            accept="image/*"
+            name="image"
+          />
+          <DropZone
+            onFileUploaded={setUploadedSong}
+            accept="audio/*"
+            name="audio"
+          />
+        </Stack>
         <Stack
           bg={"gray.50"}
           rounded={"xl"}
@@ -131,8 +143,7 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
               </Text>
             </Heading>
             <Text color={"gray.500"} fontSize={{ base: "sm", sm: "md" }}>
-              File types supported: JPG, PNG, GIF, SVG, MP4, WEBM. Max size: 40
-              MB. Thank you for creating with Kordz!
+              Thank you for creating with Kordz (Beta)!
             </Text>
           </Stack>
           <Box as={"form"} mt={10}>
@@ -158,9 +169,10 @@ export default function UploadItem({ tokenContract, marketplaceContract }) {
                 _placeholder={{
                   color: "gray.500",
                 }}
+                rows={8}
               />
               <Input
-                placeholder="Price (METIS)"
+                placeholder="Price (MATIC)"
                 bg={"gray.100"}
                 border={0}
                 color={"gray.500"}

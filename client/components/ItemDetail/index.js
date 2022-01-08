@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Container,
   Stack,
   Text,
@@ -18,19 +19,26 @@ import {
 } from "@chakra-ui/react";
 import { MdLocalShipping } from "react-icons/md";
 import { ethers } from "ethers";
+import TEMP_ITEMS from "../Marketplace/tempItems";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function ItemDetail(props) {
+  // const { tokenContract, marketplaceContract, id } = props;
+  // props = TEMP_ITEMS[id];
+  // console.log(props);
   const {
     id,
+    tokenContract,
+    marketplaceContract,
     seller,
     title,
     description,
     price,
     image,
     token,
-    tokenContract,
-    marketplaceContract,
+    audio,
   } = props;
+  console.log(props);
 
   const purchaseNFT = async () => {
     console.log("Purchase NFT");
@@ -50,17 +58,22 @@ export default function ItemDetail(props) {
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
       >
-        <Flex>
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={image}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "300px", lg: "400px" }}
-          />
-        </Flex>
+        <Stack>
+          <Flex>
+            <Image
+              rounded={"md"}
+              alt={"product image"}
+              src={`../${image}`}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={{ base: "100%", sm: "300px", lg: "400px" }}
+            />
+          </Flex>
+          <Center>
+            <ReactAudioPlayer src={`../${audio}`} controls />
+          </Center>
+        </Stack>
         <Stack spacing={{ base: 6, md: 10 }}>
           <Box as={"header"}>
             <Heading
@@ -75,7 +88,7 @@ export default function ItemDetail(props) {
               fontWeight={300}
               fontSize={"2xl"}
             >
-              {price} METIS
+              {price} MATIC
             </Text>
           </Box>
 

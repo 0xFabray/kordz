@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Kordz</title>
+        <title>Kordz (Beta)</title>
         <link rel="shortcut icon" href="favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta

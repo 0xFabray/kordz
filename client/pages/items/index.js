@@ -9,18 +9,18 @@ export default function Home() {
   const { active, account, library, connector, activate, deactivate, chainId } =
     useWeb3React();
   const [itemList, setItemList] = useState([]);
-  useEffect(() => {
-    const init = async () => {
-      try {
-        setItemList(await getItemsForSale());
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    };
-    if (active) {
-      init();
-    }
-  }, [library]);
+  // useEffect(() => {
+  //   const init = async () => {
+  //     try {
+  //       setItemList(await getItemsForSale());
+  //     } catch (error) {
+  //       console.error("Error:", error);
+  //     }
+  //   };
+  //   if (active) {
+  //     init();
+  //   }
+  // }, [library]);
 
   return (
     <div>

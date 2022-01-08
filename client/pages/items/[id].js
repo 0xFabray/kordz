@@ -17,6 +17,7 @@ import {
   getMarketplaceContract,
   getTokenContract,
 } from "../../utils/state";
+import TEMP_ITEMS from "../../components/Marketplace/tempItems";
 import ItemDetail from "../../components/ItemDetail";
 
 export default function ItemDetailPage() {
@@ -31,7 +32,7 @@ export default function ItemDetailPage() {
   useEffect(() => {
     const init = async () => {
       try {
-        setItem(await getItem(id));
+        setItem(TEMP_ITEMS[id.toString()]);
         setTokenContract(await getTokenContract(chainId, library));
         setMarketplaceContract(await getMarketplaceContract(chainId, library));
       } catch (error) {
@@ -46,6 +47,7 @@ export default function ItemDetailPage() {
   return (
     <ItemDetail
       {...item}
+      // id={id}
       tokenContract={tokenContract}
       marketplaceContract={marketplaceContract}
     />

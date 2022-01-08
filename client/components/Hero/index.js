@@ -25,7 +25,7 @@ export default function JoinOurTeam() {
         align={"center"}
         // columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, lg: 32 }}
-        py={{ base: 10, sm: 20, lg: 40 }}
+        py={{ base: 10, sm: 20, lg: 36 }}
       >
         <Stack spacing={{ base: 10, md: 10 }}>
           <Heading
@@ -47,9 +47,26 @@ export default function JoinOurTeam() {
             bgGradient="linear(to-r, purple.500, purple.800)"
             bgClip="text"
           >
-            Kordz connects creators and fans in a decentralized way on the cheap
-            and fast Polygon network. Discover and collect digital collectibles
-            on a platform made by musicians, built for musicians.
+            Kordz (Beta) connects creators and fans in a decentralized way on
+            the cheap and blazing-fast Polygon network. Discover and collect
+            digital collectibles on a platform made by musicians, built for
+            musicians.
+          </Text>
+          <Text
+            as={"span"}
+            fontSize={{ base: "1xl", sm: "1xl", md: "1.5xl", lg: "1.5xl" }}
+            bgGradient="linear(to-r, gray.500, gray.800)"
+            bgClip="text"
+          >
+            View our smart contract on the Mumbai testnet here:{" "}
+            <a
+              href="https://mumbai.polygonscan.com/address/0x583ADc8C133fdaCEd2546c0348a5AB4aA7B5BBd6"
+              target="_blank"
+            >
+              https://mumbai.polygonscan.com/address/0x583ADc8C133fdaCEd2546c0348a5AB4aA7B5BBd6
+            </a>{" "}
+            // Note: Kordz (Beta) is currently under construction, and not all
+            features may be functional.
           </Text>
           <Stack
             flex={{ base: 1, md: 0 }}

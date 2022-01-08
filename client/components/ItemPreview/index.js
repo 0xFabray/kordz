@@ -7,11 +7,13 @@ import {
   Stack,
   Image,
   Link,
+  Container,
 } from "@chakra-ui/react";
 // import Link from "next/link";
+import ReactAudioPlayer from "react-audio-player";
 
 export default function ItemPreview(props) {
-  const { id, seller, title, price, image } = props;
+  const { id, seller, title, price, image, audio } = props;
   console.log("Item Preview: " + JSON.stringify(props));
   return (
     <Center py={12}>
@@ -71,7 +73,10 @@ export default function ItemPreview(props) {
             </Heading>
             <Stack direction={"row"} align={"center"}>
               <Text fontWeight={800}>{price}</Text>
-              <Text color={"gray.600"}>METIS</Text>
+              <Text color={"gray.600"}>MATIC</Text>
+            </Stack>
+            <Stack px={0} py={6}>
+              <ReactAudioPlayer src={audio} controls />
             </Stack>
           </Stack>
         </Box>

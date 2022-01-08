@@ -14,11 +14,13 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
+import TEMP_ITEMS from "./tempItems";
 import { useState } from "react";
 import { MdLocalShipping } from "react-icons/md";
 import ItemPreview from "../ItemPreview";
 
 export default function Marketplace({ items }) {
+  items = TEMP_ITEMS;
   return (
     <Container maxW={"8xl"}>
       <Heading

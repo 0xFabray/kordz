@@ -1,14 +1,9 @@
 import React, { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-// import CloudUploadIcon from "@material-ui/icons/CloudUpload";
-// import { useCallback } from "react";
-// import { useDropzone } from "react-dropzone";
 import { Center, useColorModeValue, Icon } from "@chakra-ui/react";
-import { AiFillFileAdd } from "react-icons/ai";
+import ReactAudioPlayer from "react-audio-player";
 
-// import { useStyles } from "./styles.js";
-
-const DropZone = ({ onFileUploaded }) => {
+const DropZone = ({ onFileUploaded, accept, name }) => {
   const [selectedFileUrl, setSelectedFileUrl] = useState("");
 
   const onDrop = useCallback(
@@ -23,14 +18,19 @@ const DropZone = ({ onFileUploaded }) => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: "image/*",
+    accept: accept,
     maxFiles: 1,
     multiple: false,
   });
 
-  const dropText = isDragActive
-    ? "Drop the files here..."
-    : "Drag and drop files here, or click to select files...";
+  // const dropText = isDragActive
+  //   ? "Drop the files here..."
+  //   : "Drag and drop files here, or click to select files...";
+
+  const dropText =
+    name == "audio"
+      ? "🎶 Drop your audio file here (MP3, WAV, etc...)"
+      : "📷 Drop your song cover here (PNG, JPEG, etc...)";
 
   const activeBg = useColorModeValue("gray.100", "gray.600");
   const borderColor = useColorModeValue(
@@ -40,13 +40,16 @@ const DropZone = ({ onFileUploaded }) => {
 
   return (
     <div {...getRootProps()}>
-      <input {...getInputProps()} name="image" accept="image/*" />
-
-      {selectedFileUrl ? (
+      <input {...getInputProps()} name={name} accept={accept} />
+      {name == "audio" && selectedFileUrl && (
+        <ReactAudioPlayer src={selectedFileUrl} controls />
+      )}
+      {name == "image" && selectedFileUrl && (
         <img src={selectedFileUrl} alt="Point thumbnail" />
-      ) : (
+      )}
+      {!selectedFileUrl && (
         <Center
-          py={230}
+          py={120}
           cursor="pointer"
           bg={isDragActive ? activeBg : "transparent"}
           _hover={{ bg: activeBg }}

@@ -55,7 +55,7 @@ export default function SmallCentered() {
           fontSize="xl"
           py={3}
         >
-          🎶 Kordz
+          🎶 Kordz (Beta)
         </Text>
 
         <Stack direction={"row"} spacing={6}>

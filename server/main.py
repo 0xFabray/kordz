@@ -45,7 +45,7 @@ def updateTx(id):
     try:
         with open("items.json", "r") as f:
             tokens = json.loads(f.read())
-        tokens[id]["token"] = "https://stardust-explorer.metis.io/tx/" + request.form.get("hash")
+        tokens[id]["token"] = "https://mumbai.polygonscan.com/tx/" + request.form.get("hash")
         with open("items.json", "w") as f:
             json.dump(tokens, f)
         return {"message": "DONE"}
@@ -56,7 +56,13 @@ def updateTx(id):
 @app.route("/image/<path:filename>", methods=["GET"])
 def image(filename):
     print("/image")
-    return send_from_directory("db", filename)
+    return send_from_directory("db/image", filename)
+
+
+@app.route("/audio/<path:filename>", methods=["GET"])
+def audio(filename):
+    print("/audio")
+    return send_from_directory("db/audio", filename)
 
 
 @app.route("/upload", methods=["POST"])
@@ -65,15 +71,17 @@ def upload():
         try:
             if not request.files:
                 return {"message": "FILE_NOT_FOUND"}
-            file = request.files.get("image")
-            if file:
+            imageFile = request.files.get("image")
+            audioFile = request.files.get("audio")
+            if imageFile and audioFile:
                 items_json_path = Path("items.json")
                 items_json_path.touch(exist_ok=True)
                 db_folder_path = Path("db")
                 db_folder_path.mkdir(exist_ok=True)
                 with open("items.json", "r") as f:
                     tokens = json.loads(f.read())
-                file.save(os.path.join(app.config["UPLOAD_FOLDER"], str(file.filename)))
+                imageFile.save(os.path.join(app.config["UPLOAD_FOLDER"], "image", str(imageFile.filename)))
+                audioFile.save(os.path.join(app.config["UPLOAD_FOLDER"], "audio", str(audioFile.filename)))
                 data = request.form
                 token_id = int(data.get("id"))
                 new_token_object = {
@@ -81,14 +89,13 @@ def upload():
                     "description": data.get("description"),
                     "price": data.get("price"),
                     "seller": data.get("seller"),
-                    "image": os.path.join(request.host_url, "image", str(file.filename)),
+                    "image": os.path.join(request.host_url, "image", str(imageFile.filename)),
+                    "audio": os.path.join(request.host_url, "audio", str(audioFile.filename)),
                 }
                 try:
                     tokens[str(token_id)] = new_token_object
                 except:
                     return {"message": "TOKEN_DOES_NOT_EXIST_IN_OUR_SERVERS"}
-                # else:
-                #     return {"message": "MINTING_SUPPLY_ERROR"}
                 with open("items.json", "w") as f:
                     json.dump(tokens, f)
                     print(tokens)
