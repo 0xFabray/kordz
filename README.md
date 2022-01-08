@@ -6,9 +6,11 @@
   <h3 align="center">Kordz - MoleDAO Hackathon Submission</h3>
 
   <p align="center">
-  A decentralized music owning platform built with Polygon. 🎶 Power to the musicians.
+  A decentralized music owning platform built with Polygon. Power to the musicians.
     <br />
-    <a href="https://mumbai.polygonscan.com/address/0x583ADc8C133fdaCEd2546c0348a5AB4aA7B5BBd6">View Smart Contract on the Polygon Block Explorer</a>
+    <a href="kordz.vercel.app">View Website @ kordz.vercel.app</a>
+    <br />
+    <a href="https://mumbai.polygonscan.com/address/0x583ADc8C133fdaCEd2546c0348a5AB4aA7B5BBd6">View Smart Contract  @ Mumbai Block Explorer</a>
   </p>
 </div>
 
